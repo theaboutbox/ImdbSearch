@@ -35,3 +35,16 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "thin", ">= 1.5.0"
+gem "mongoid", ">= 3.0.18"
+gem "haml", ">= 3.1.7"
+gem "haml-rails", ">= 0.3.5", :group => :development
+gem "hpricot", ">= 0.8.6", :group => :development
+gem "ruby_parser", ">= 3.1.1", :group => :development
+gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
+gem "capybara", ">= 2.0.2", :group => :test
+gem "database_cleaner", ">= 0.9.1", :group => :test
+gem "mongoid-rspec", ">= 1.5.6", :group => :test
+gem "email_spec", ">= 1.4.0", :group => :test
+gem "fabrication", ">= 2.3.0", :group => [:development, :test]

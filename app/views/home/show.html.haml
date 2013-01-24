@@ -1,0 +1,16 @@
+%h1 Title Search
+%p Search through movies, It's really cool!
+.search
+  %form{action: home_path, method: 'get'}
+    %label{for: :query} Search
+    %input{type: :text, name: :query, value: @query}
+    %input{type: :submit, name: :submit, value: 'Search!'}
+.results
+  - if @results
+    %h2 Search Results (#{@results.total} results)
+    %h3 Years
+    %ul
+      - @results.facet(:year).rows.each do |facet|
+        %li #{facet.value} - #{pluralize(facet.count,'Title')}
+    %h3 Titles
+    = render partial: 'title', collection: @results.results

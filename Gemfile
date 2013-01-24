@@ -9,6 +9,10 @@ gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
 gem "mongoid", ">= 3.0.18"
 gem "haml", ">= 3.1.7"
+gem "sunspot_rails"
+gem "sunspot_mongo", :git => "https://github.com/derekharmel/sunspot_mongo.git", :branch => "master"
+
+gem "sunspot_solr", group: :development
 gem "haml-rails", ">= 0.3.5", :group => :development
 gem "hpricot", ">= 0.8.6", :group => :development
 gem "ruby_parser", ">= 3.1.1", :group => :development
@@ -22,3 +26,6 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.3"
 gem "better_errors", ">= 0.3.2", :group => :development
 gem "binding_of_caller", ">= 0.6.8", :group => :development
+gem "pry-rails", group: [:development, :test]
+gem "guard-rspec", group: :development
+gem 'rb-fsevent', '~> 0.9.1', group: :development
